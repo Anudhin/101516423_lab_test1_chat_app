@@ -44,7 +44,7 @@ $("#joinBtn").click(() => {
       $("#chatBox").scrollTop($("#chatBox")[0].scrollHeight);
     });
 
-  $("#chatBox").append(`<div class="text-muted">✅ Joined room: ${room}</div>`);
+  $("#chatBox").append(`<div class="text-muted"> Joined room: ${room}</div>`);
 });
 
 
@@ -56,7 +56,7 @@ $("#leaveBtn").click(() => {
 
   socket.emit("leaveRoom", { username: user.username, room: currentRoom });
 
-  $("#chatBox").append(`<div class="text-muted">❌ Left room: ${currentRoom}</div>`);
+  $("#chatBox").append(`<div class="text-muted"> Left room: ${currentRoom}</div>`);
 
   currentRoom = null;
   $("#currentRoom").text("None");
